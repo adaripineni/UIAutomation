@@ -28,7 +28,7 @@ public class WebTableTest {
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 		d.get("https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 	} 
 	
 	@Test

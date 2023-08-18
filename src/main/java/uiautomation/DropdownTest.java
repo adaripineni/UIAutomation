@@ -37,8 +37,15 @@ public class DropdownTest {
 		WebElement dropDown= d.findElement(By.tagName("select"));
 		Select menu = new Select(dropDown);
 		List<WebElement> options = menu.getOptions();
-		menu.selectByIndex(options.size()-1);
-		Thread.sleep(2000);
+		for( WebElement option:options) {
+			if(option.getText().startsWith("B")){
+				menu.selectByVisibleText(option.getText());
+				Thread.sleep(1000);
+			}
+		}
+//		menu.selectByIndex(options.size()-1);
+//		System.out.println(menu.getFirstSelectedOption().getText());
+//		Thread.sleep(2000);
 	}
 	
 	@AfterTest
